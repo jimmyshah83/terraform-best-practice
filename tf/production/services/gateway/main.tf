@@ -9,7 +9,7 @@ terraform {
   }
 }
 
-module "vault_account_configuration" {
+module "vault_gateway_configuration" {
   source = "../../../modules/vault"
   secret_path = var.secret_path
   secret_data = var.secret_data
@@ -17,12 +17,4 @@ module "vault_account_configuration" {
   policy = var.policy
   generic_endpoint_path = var.generic_endpoint_path
   generic_endpoint_data = var.generic_endpoint_data
-}
-
-module "docker_configuration" {
-  source = "../../../modules/docker"
-  image = var.image
-  name = var.name
-  env = var.env
-  network_name = var.network_name
 }
