@@ -29,3 +29,6 @@ override.tf.json
 # example: *tfplan*
 /form3-platform-interview.iml
 /tf/.terraform.lock.hcl
+/ubuntu-bionic-18.04-cloudimg-console.log
+/tf/.terraform/
+/.vagrant/

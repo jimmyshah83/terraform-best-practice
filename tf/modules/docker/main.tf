@@ -13,9 +13,9 @@ resource "docker_container" "container" {
   image = var.image
   name  = var.name
   env = var.env
-#  networks_advanced {
-#    name = var.network_name
-#  }
+  networks_advanced {
+    name = var.network_name
+  }
   lifecycle {
     ignore_changes = all
   }
