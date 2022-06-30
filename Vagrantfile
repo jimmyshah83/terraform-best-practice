@@ -36,7 +36,15 @@ docker build ./services/payment -t form3tech-oss/platformtest-payment
 docker-compose up -d
 popd
 echo Applying terraform script
-pushd /vagrant/tf
+pushd /vagrant/tf/development
+terraform init -upgrade
+terraform apply -auto-approve
+popd
+pushd /vagrant/tf/staging
+terraform init -upgrade
+terraform apply -auto-approve
+popd
+pushd /vagrant/tf/production
 terraform init -upgrade
 terraform apply -auto-approve
 popd
