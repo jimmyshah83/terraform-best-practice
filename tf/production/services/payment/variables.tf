@@ -27,3 +27,15 @@ variable "generic_endpoint_data" {
   }
 EOT
 }
+
+variable "image" { default = "form3tech-oss/platformtest-payment" }
+variable "name" { default = "payment_production" }
+variable "env" {
+  default = [
+    "VAULT_ADDR=http://vault-production:8200",
+    "VAULT_USERNAME=payment-production",
+    "VAULT_PASSWORD=123-payment-production",
+    "ENVIRONMENT=production"
+  ]
+}
+variable "network_name" { default = "vagrant_production" }

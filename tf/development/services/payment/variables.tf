@@ -27,3 +27,15 @@ variable "generic_endpoint_data" {
   }
 EOT
 }
+
+variable "image" { default = "form3tech-oss/platformtest-payment" }
+variable "name" { default = "payment_development" }
+variable "env" {
+  default = [
+    "VAULT_ADDR=http://vault-development:8200",
+    "VAULT_USERNAME=payment-development",
+    "VAULT_PASSWORD=123-payment-development",
+    "ENVIRONMENT=development"
+  ]
+}
+variable "network_name" { default = "vagrant_development" }

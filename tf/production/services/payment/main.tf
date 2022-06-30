@@ -18,3 +18,11 @@ module "vault_payment_configuration" {
   generic_endpoint_path = var.generic_endpoint_path
   generic_endpoint_data = var.generic_endpoint_data
 }
+
+module "docker_configuration" {
+  source = "../../../modules/docker"
+  image = var.image
+  name = var.name
+  env = var.env
+  network_name = var.network_name
+}
