@@ -1,4 +1,4 @@
-# Form3 Platform Interview Solution
+# Terraform best practices
 
 ## Proposed Structure
 
@@ -31,6 +31,3 @@ This has been demonstrated in the `Vagrant` file which runs the below steps in s
 `terraform init -upgrade`  
 `terraform apply -auto-approve`  
 `popd`  
-
-<br /><br />
-[Thank you for giving me the opportunity. `Being a beginner to terraform`, I enjoyed this assignment thoroughly and learnt quite a lot about infrastructure as code] 
